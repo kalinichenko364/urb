@@ -1,3 +1,5 @@
-import sayHello from './lib/sayHello';
+// import './lang.js';
 
-sayHello();
+// import './slider.js';
+
+// import './burger.js';
