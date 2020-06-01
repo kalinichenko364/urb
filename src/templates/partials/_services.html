@@ -1,6 +1,94 @@
+{% set services = [
+  {
+    img: "img/serv-1.jpg",
+    alt: "Цветная и ЧБ распечатка",
+    title: "Цветная и ЧБ распечатка",
+    money: "90",
+    time: "60"
+  },
+  {
+    img: "img/serv-2.jpg",
+    alt: "Переплет дипломов",
+    title: "Переплет дипломов",
+    money: "90",
+    time: "60"
+  },
+  {
+    img: "img/serv-3.jpg",
+    alt: "Переплет диссертаций",
+    title: "Переплет диссертаций",
+    money: "90",
+    time: "60"
+  },
+  {
+    img: "img/serv-4.jpg",
+    alt: "Печать авторефератов",
+    title: "Печать авторефератов",
+    money: "90",
+    time: "60"
+  },
+  {
+    img: "img/serv-3.jpg",
+    alt: "Переплет диссертаций",
+    title: "Переплет диссертаций",
+    money: "90",
+    time: "60"
+  },
+  {
+    img: "img/serv-3.jpg",
+    alt: "Переплет диссертаций",
+    title: "Переплет диссертаций",
+    money: "90",
+    time: "60"
+  },
+  {
+    img: "img/serv-3.jpg",
+    alt: "Переплет диссертаций",
+    title: "Переплет диссертаций",
+    money: "90",
+    time: "60"
+  },
+  {
+    img: "img/serv-3.jpg",
+    alt: "Переплет диссертаций",
+    title: "Переплет диссертаций",
+    money: "90",
+    time: "60"
+  },
+  {
+    img: "img/serv-3.jpg",
+    alt: "Переплет диссертаций",
+    title: "Переплет диссертаций",
+    money: "90",
+    time: "60"
+  },
+  {
+    img: "img/serv-3.jpg",
+    alt: "Переплет диссертаций",
+    title: "Переплет диссертаций",
+    money: "90",
+    time: "60"
+  },
+  {
+    img: "img/serv-3.jpg",
+    alt: "Переплет диссертаций",
+    title: "Переплет диссертаций",
+    money: "90",
+    time: "60"
+  },
+  {
+    img: "img/serv-3.jpg",
+    alt: "Переплет диссертаций",
+    title: "Переплет диссертаций",
+    money: "90",
+    time: "60"
+  }
+]
+%}
+
 <!-- begin services -->
 
-<section class="services">
+<section class="services container">
 
   <div class="section-title">
     <div class="section-title__text">
@@ -14,7 +102,18 @@
 
   </div>
 
-  {% include "partials/_services-items.html" %}
+  <div class="services__list">
+    {% for item in services %}
+    <div class="services__item">
+      <img class="services__pic" src="{{item.img}}" alt="{{item.alt}}">
+      <div class="services__title">{{item.title}}</div>
+      <div class="services__price">
+        <div class="services__price-money">от {{item.money}} грн</div>
+        <div class="services__price-time">от {{item.time}} минут</div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
 
 </section>
 

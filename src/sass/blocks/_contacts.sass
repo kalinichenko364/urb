@@ -1,0 +1,53 @@
+.contacts
+
+  &__list
+    display: flex
+    width: 1100px
+    justify-content: space-between
+
+  &__item
+    width: 315px
+    padding-left: 50px
+    &:last-child
+      width: 400px
+
+    &-bottom
+      display: flex
+
+    &-metro
+      position: relative
+      +glb
+      color: $dark-blue
+      &::after
+        content: ""
+        background: url("../img/metro.png") no-repeat
+        position: absolute
+        top: 5px
+        left: -40px
+        width: 30px
+        height: 30px
+
+    &-phone
+      position: relative
+      +glb
+      color: $dark-blue
+      &::after
+        content: ""
+        background: url("../img/phone-1.png") no-repeat
+        position: absolute
+        top: 5px
+        left: -40px
+        width: 30px
+        height: 30px
+
+  &__location
+    position: relative
+    font-size: 16px
+    &::after
+      content: ""
+      background: url("../img/marker.png") no-repeat
+      position: absolute
+      top: 5px
+      left: -40px
+      width: 30px
+      height: 30px

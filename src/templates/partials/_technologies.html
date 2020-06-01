@@ -1,11 +1,55 @@
+{% set technologies = [
+  {
+    img: "img/tehn-1.jpg",
+    alt: "Биговка",
+    title: "Биговка"
+  },
+  {
+    img: "img/tehn-2.jpg",
+    alt: "Индексная вырубка",
+    title: "Индексная вырубка"
+  },
+  {
+    img: "img/tehn-3.jpg",
+    alt: "Кашировка",
+    title: "Кашировка"
+  },
+  {
+    img: "img/tehn-4.jpg",
+    alt: "Лазерная гравировка",
+    title: "Лазерная гравировка"
+  },
+  {
+    img: "img/tehn-5.jpg",
+    alt: "Биговка",
+    title: "Биговка"
+  },
+  {
+    img: "img/tehn-6.jpg",
+    alt: "Индексная вырубка",
+    title: "Индексная вырубка"
+  },
+  {
+    img: "img/tehn-7.jpg",
+    alt: "Кашировка",
+    title: "Кашировка"
+  },
+  {
+    img: "img/tehn-8.jpg",
+    alt: "Лазерная гравировка",
+    title: "Лазерная гравировка"
+  }
+]
+%}
+
 <!-- begin technologies -->
 
-<section class="technologies">
+<section class="technologies container">
 
   <div class="section-title">
     <div class="section-title__text">
-      <h2 class="section-title__h1">Наши клиенты — лидеры рынка</h2>
-      <p class="section-title__descr">К нам обращаются большие бренды, которым доверяет вся Украина </p>
+      <h2 class="section-title__h1">Какие технологии мы используем в печати?</h2>
+      <p class="section-title__descr">Посмотрите, какие виды услуг ещё можно заказать в нашей типографии</p>
     </div>
     <div class="section-title__btn">
       <button class="btn">Смотреть все технологии</button>
@@ -13,7 +57,19 @@
 
   </div>
 
-  {% include "partials/_technologies-items.html" %}
+  <div class="technologies__content">
+    <div class="technologies__list technologies__item">
+      {% for item in technologies %}
+      <div class="technologies__list-item">
+        <img class="technologies__pic" src="{{item.img}}" alt="{{item.alt}}">
+        <div class="technologies__title">{{item.title}}</div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="technologies__item video-slider">
+
+    </div>
+  </div>
 
 </section>
 

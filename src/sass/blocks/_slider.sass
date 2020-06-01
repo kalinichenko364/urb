@@ -1,0 +1,20 @@
+.slider
+  position: relative
+
+  &__arrow
+    display: flex
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    width: 85px
+    height: 85px
+    padding: 20px 25px
+    opacity: 0.8
+    background-color: $white
+    cursor: pointer
+    &:hover
+      opacity: 1
+    &--prev
+      left: 15px
+    &--next
+      right: 15px

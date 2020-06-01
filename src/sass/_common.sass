@@ -1,5 +1,28 @@
+$blue-nav: #6d86a0
+$blue-footer: #7293b4
+$dark-blue: #004f9f
+$green: #70a513
+$white: #ffffff
+
++font(glr, 'gilroy-regular')
++font(glb, 'gilroy-bold')
+
+=glr
+  font-family: glr, sans-serif
+  font-size: 18px
+  line-height: 1.25
+  font-weight: 400
+  color: #000000
+
+=glb
+  font-family: glb, sans-serif
+  font-size: 30px
+  line-height: 1.25
+  font-weight: 400
+  color: $dark-blue
+
 body
-	background: #ff0
-	font-size: 20px
-	// +css-lock(16, 50, 600, 1000)
-	line-height: 1.4
+	+glr
+a
+  text-decoration: none
+  color: #7293b4

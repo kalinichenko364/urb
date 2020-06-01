@@ -1,6 +1,27 @@
+{% set advantages = [
+  {
+    counter: "2006",
+    title: "Старт нашей успешной работы"
+  },
+  {
+    counter: "135",
+    title: "Ориентировочное количество заказов в день"
+  },
+  {
+    counter: "97",
+    title: "Видов услуг и продукции
+    для наших клиентов"
+  },
+  {
+    counter: "150k",
+    title: "Счастливых клиентов типографии URB"
+  }
+]
+%}
+
 <!-- begin advantages -->
 
-<section class="advantages">
+<section class="advantages container">
 
   <div class="section-title">
     <div class="section-title__text">
@@ -12,7 +33,14 @@
 
   </div>
 
-  {% include "partials/_advantages-items.html" %}
+  <div class="advantages__list">
+    {% for item in advantages %}
+    <div class="advantages__item">
+      <div class="advantages__title">{{item.counter}}</div>
+      <div class="advantages__title">{{item.title}}</div>
+    </div>
+    {% endfor %}
+  </div>
 
 </section>
 

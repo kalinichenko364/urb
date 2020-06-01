@@ -1,0 +1,47 @@
+{% set promo = [
+  {
+    img: "img/promo-1-clock.png",
+    alt: "Часы",
+    title: "Сделаем быстро
+    и «под ключ»"
+  },
+  {
+    img: "img/promo-2-truck.png",
+    alt: "Грузовик",
+    title: "Доставка по Киеву и городам"
+  },
+  {
+    img: "img/promo-3-vip.png",
+    alt: "VIP",
+    title: "Выполняем сложные заказы"
+  },
+  {
+    img: "img/promo-4-print.png",
+    alt: "Станок",
+    title: "Современное оборудование"
+  },
+  {
+    img: "img/promo-5-cmyk.png",
+    alt: "СМУК",
+    title: "Делаем пробную печать"
+  },
+  {
+    img: "img/promo-6-hands-and-gestures.png",
+    alt: "Выгода",
+    title: "Спец.цены для рекламных агенств"
+  }
+]
+%}
+
+<!-- begin promo -->
+<section class="promo container">
+  <div class="promo__list">
+    {% for item in promo %}
+    <div class="promo__item">
+      <img class="promo__pic" src="{{item.img}}" alt="{{item.alt}}">
+      <div class="promo__title">{{item.title}}</div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+<!-- end promo -->

@@ -1,26 +1,45 @@
+{% set clients = [
+  {
+    img: "img/clients-1.png",
+    alt: "DemiWeb"
+  },
+  {
+    img: "img/clients-2.png",
+    alt: "УкрБуд"
+  },
+  {
+    img: "img/clients-3.png",
+    alt: "Цитрус"
+  },
+  {
+    img: "img/clients-4.png",
+    alt: "DemiWeb"
+  },
+  {
+    img: "img/clients-5.png",
+    alt: "УкрБуд"
+  },
+  {
+    img: "img/clients-6.png",
+    alt: "Цитрус"
+  }
+]
+%}
+
 <!-- begin slider -->
-<section class="slider ">
-  <div class="js-slider">
-    <div class="slider__item">
-      <img src="img/slider-1.jpg" alt="">
+<section class="clients-slider">
+  <div class="clients-slider__list js-clients-slider">
+    {% for item in clients %}
+    <div class="clients-slider__item">
+      <img class="clients-slider__pic" src="{{item.img}}" alt="{{item.alt}}">
     </div>
-    <div class="slider">
-      <img src="img/slider-2.jpg" alt="">
-    </div>
-    <div class="slider__item">
-      <img src="img/slider-1.jpg" alt="">
-    </div>
-    <div class="slider__item">
-      <img src="img/slider-2.jpg" alt="">
-    </div>
-    <div class="slider__item">
-      <img src="img/slider-1.jpg" alt="">
-    </div>
-    <div class="slider__item">
-      <img src="img/slider-2.jpg" alt="">
-    </div>
+    {% endfor %}
   </div>
-  <div class="slider__arrow slider__arrow--prev"></div>
-  <div class="slider__arrow slider__arrow--next"></div>
+  <div class="clients-slider__arrow clients-slider__arrow--prev">
+    <img src="img/arrow-left-small.png">
+  </div>
+  <div class="clients-slider__arrow clients-slider__arrow--next">
+    <img src="img/arrow-right-small.png">
+  </div>
 </section>
 <!-- end slider -->

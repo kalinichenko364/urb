@@ -1,0 +1,30 @@
+.clients
+  margin-bottom: 60px
+
+.clients-slider
+  position: relative
+
+  &__arrow
+    display: flex
+    position: absolute
+    top: 30%
+    transform: translateY(-50%)
+    width: 45px
+    height: 45px
+    padding: 10px 15px
+    opacity: 0.8
+    background-color: $white
+    cursor: pointer
+    &:hover
+      opacity: 1
+    &--prev
+      left: 0px
+    &--next
+      right: 0px
+
+  .slick-list
+    width: 1200px
+    margin: 0 auto
+    padding: 0 15px
+  .slick-slide
+    padding: 0 50px
